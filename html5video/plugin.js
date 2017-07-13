@@ -114,6 +114,13 @@ CKEDITOR.plugins.add( 'html5video', {
                 }
             }
         } );
+	    
+	editor.addCommand( 'html5video', new CKEDITOR.dialogCommand( 'html5video' ) );
+	editor.ui.addButton && editor.ui.addButton( 'html5video', {
+				label: editor.lang.html5video.button,
+				command: 'html5video',
+				toolbar: 'insert,20'
+			});
 
         if ( editor.contextMenu ) {
             editor.addMenuGroup( 'html5videoGroup' );
